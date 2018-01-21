@@ -1,19 +1,141 @@
 <!DOCTYPE html>
 <head>
-<header>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
+
+h1 {
+    font-family: Londrina Shadow;
+	font-size: 75px;
+	text-align: center;
+	color: #aaaaaa;
+    }
+
+h2 {
+	text-align: center;
+	margin: -50px 0 70px 0;
+	color: #bbbbbb;
+    }
+
+body {
+      font-family: helvetica, sans-serif;
+	margin: 0 auto;
+	max-width: 600px;
+	background: #232323;
+      }
+
+div {
+	height: 200px;
+	background-size: cover;
+	position: relative;
+	margin: 40px 0px 10px 0px;
+	border-radius: 12px;
+	/*border: 2px solid black;*/
+		}
+.first {
+	background: url("http://dash.ga.co/assets/firstcourse.jpg");
+	}
+
+.second {
+	background: url("http://dash.ga.co/assets/secondcourse.jpg");
+	}
+
+.dessert {
+	background: url("http://dash.ga.co/assets/dessertcourse.jpg");
+	}	
+
+.price {
+	float: right;/*(rather than text-align)*/
+	}
+
+p {     font-size: 22px;
+	color: rgba(255, 255, 255, 1);
+	background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
+background: -moz-linear-gradient(bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
+	padding: 10px;
+	text-align: justify;	
+	light-height: 30px;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	height: 30px;
+	transition: height 1s;
+	-webkit-transition: height 1s;
+	-moztransition: height .5s;
+		}
+
+small {
+	font-size: small;
+	opacity: 0;
+	}
+span {
+	text-align: right;
+	}
+
+.show-description p {
+	height: 100px;
+	}
+
+.show-description small {
+	opacity: 1;
+	}
+
+@media (max-width: 500px) {
+
+	h1 {
+	font-size:50px;
+	margin-top: 20px;
+	line-height: 40px;
+	   }
+
+	h2 {
+		font-size: 20px;
+		margin: 20px 0 30px 0;
+	    }
+
+	div {
+ 		margin: 20px 12px 0 12px;
+             }
+
+	p {
+		font-size: 20px;
+		line-height: 24px;
+	   }
+
+	small {
+		font-size: 16px;
+		} 
+
+			   }
 </style>
 </head>
 <body>
 <h1>Esha's Restaurent</h1>
 
-<h2>welsh onion soko $14<h2>
-<p>Mustard slerra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic onion  summer purslane asparagus lentil.</p>
+<h2>A New York City Eatery</h2>
 
-<h2>pastrami boudin tounge $22</h2>
-<p>Tri-tip capicola keilbasa salami brisket chicken rump strip steak dumpstick. meatlosf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin proscuitto bresaola.</p>
+<div class="first">
+	<p>welsh onion soko <span class="price">$14</span><br /><small>Mustard slerra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic onion  summer purslane asparagus lentil.</small></p>
+</div>
 
-<h2>fruitcake marzipan pudding dragee $8</h2>
-<p>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake . Jelly-o bear claw icecream candy cakes.</p>
+<div class="second">
+         <p>pastrami boudin tounge <span class="price">$22</span><br /><small>Tri-tip capicola keilbasa salami brisket chicken rump strip steak dumpstick. meatlosf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin proscuitto bresaola.</small></p>
+</div>
 
+<div class="dessert">
+	<p>fruitcake marzipan pudding dragee<span class="price">$8</span><br /><small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake . Jelly-o bear claw icecream candy cakes.</small></p>
+</div>
+
+
+<script>
+   alert("javascript works!")
+
+	$("div").on("click", function() {
+          $(this).toggleClass("show-description");
+                                         });
+
+</script>
+</body>
+</html>
 
